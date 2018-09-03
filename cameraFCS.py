@@ -115,7 +115,7 @@ def animate(i):
 	j=0
 	for Fbj in reversed(FbQueue):
 		FbFb = Fb*Fbj
-		FbFr = Fr*Fbj # comment to skip cross-correlation
+		FbFr = Fr*Fbj # comment this line to skip cross-correlation
 		FbFbQueue[j].append(FbFb)
 		FbFrQueue[j].append(FbFr) # comment to skip cross-correlation
 		FbFbAve[j] += FbFb/n
@@ -162,8 +162,9 @@ def animate(i):
 	redBar.set_facecolor('r')
 	ax3.set_xticks([0,1])
 	ax3.set_xticklabels(['blue', 'red'])
+
 ani = animation.FuncAnimation(fig, animate, interval=delay)
-plt.show()
+plt.show() # this command runs continously until "FCS" window is closed
 destroyWindow("camera")
 cam.release()
 # Lukasz Mioduszewski, piknik naukowy 2018
