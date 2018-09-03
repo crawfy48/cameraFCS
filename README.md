@@ -8,3 +8,5 @@ This code requires openCV (for capturing camera images), deque (to efficiently a
 Color values in the filters should be changed so that image appearing in the "camera" window is black except for the objects whose "fluorescence" is being observed.
 
 This code starts like any Python script (python cameraFCS.py). After plt.show() the windows are refreshed in real-time, so to close the program, you need to close the graph window (named "FCS"). Closing the "camera" window will just make it reappear soon. Of course Ctrl+C in the command prompt also works.
+
+Depending on the CPU speed the program may run faster or slower, so the time units can be unaccurate.
